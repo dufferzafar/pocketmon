@@ -1,0 +1,9 @@
+
+# Read the setup instructions in Readme to know how to obtain these.
+
+consumer_key = ""
+
+access_token = ""
+
+# https://en.wikipedia.org/wiki/Words_per_minute#Reading_and_comprehension
+words_per_minute = 250

@@ -43,10 +43,10 @@ def reading_time(minutes):
         return '%d minutes' % rounded
     elif 50 <= rounded < 75:
         return '1 hour'
-    elif 75 <= rounded < 90:
+    elif 75 <= rounded < 105:
         return '1.5 hours'
     else:
-        return '2 hours'
+        return '2+ hours'
 
 
 if __name__ == '__main__':

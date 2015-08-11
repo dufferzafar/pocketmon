@@ -5,6 +5,12 @@ A script that tags my [Pocket](http://getpocket.com/) articles based on the time
 
 I wanted to make this for quite some time, but then I found [readruler.com](http://readruler.com/) which basically does the same thing, but you have to open it everytime you add new articles.
 
+## Screenshots
+
+![Tags on each article](screenshots/article_list.png)
+
+![Tags list](screenshots/tag_list.png)
+
 ## Setup
 
 1. Install a wrapper to Pocket's API (for some reason it's not on PyPI)

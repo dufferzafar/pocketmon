@@ -53,8 +53,11 @@ if __name__ == '__main__':
     api = pocket.Api(consumer_key=consumer_key,
                      access_token=access_token)
 
-    items = api.get(sort='newest', state='unread', tag='_untagged_',
-                    detailType='complete')
+    try:
+        items = api.get(sort='newest', state='unread', tag='_untagged_',
+                        detailType='complete')
+    except AttributeError:
+        items = []
 
     for item in items:
 

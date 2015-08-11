@@ -1,3 +1,6 @@
+import logging
+logging_level = logging.DEBUG
+logging_handler = logging.StreamHandler()
 
 # Read the setup instructions in Readme to know how to obtain these.
 

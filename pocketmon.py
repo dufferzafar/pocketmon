@@ -9,6 +9,7 @@ import pocket
 from config import (
     consumer_key,
     access_token,
+    words_per_minute,
     logging_level,
     logging_handler,
 )
@@ -34,6 +35,19 @@ def add_tag(item, tag):
     """ % (item.id, tag))
 
 
+def reading_time(minutes):
+    """ Convert minutes to a nice string representing the time. """
+    rounded = int(5 * round(float(minutes)/5)) or 2
+
+    if 2 < rounded < 50:
+        return '%d minutes' % rounded
+    elif 50 <= rounded < 75:
+        return '1 hour'
+    elif 75 <= rounded < 90:
+        return '1.5 hours'
+    else:
+        return '2 hours'
+
 
 if __name__ == '__main__':
     api = pocket.Api(consumer_key=consumer_key,
@@ -48,9 +62,7 @@ if __name__ == '__main__':
         item.is_article = int(item.is_article)
 
         if item.word_count:
-            # Add tag for minutes
-            pass
+            add_tag(item, reading_time(item.word_count // words_per_minute))
 
         elif not item.is_article:
-            # Add tag 'not an article'
-            pass
+            add_tag(item, 'not an article')

@@ -13,14 +13,9 @@ I thought of this some time ago, but then I found [readruler.com](http://readrul
 
 ## Setup
 
-<p>1. Install a wrapper to Pocket's API (for some reason it's not on PyPI)</p>
+<p>1. Install a wrapper to Pocket's API </p>
 
-```bash
-$ git clone https://github.com/felipeborges/python-pocket
-$ cd python-pocket
-$ python setup.py build
-$ python setup.py install
-```
+`pip install git+https://github.com/felipecorrea/python-pocket`
 
 <p>2. Getting a consumer key.</p>
 
@@ -32,7 +27,10 @@ Create a [new Pocket App](http://getpocket.com/developer/apps/new) & copy the co
 
 <p>3. Getting an access token</p>
 
-`$ python python-pocket/get_access_token.py`
+```
+$ git clone https://github.com/felipecorrea/python-pocket
+$ python python-pocket/get_access_token.py
+```
 
 Enter your consumer key and allow access to the app in browser. This will print out your access token.
 
